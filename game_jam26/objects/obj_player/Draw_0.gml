@@ -1,2 +1,2 @@
 draw_self()
-draw_text(x,y-40,mask_active)
+draw_text(x,y-40,string(mask_active))

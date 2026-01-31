@@ -1,62 +1,67 @@
-// 1. Inputs (Pegando as teclas)
-var _key_up = keyboard_check(ord("W")) || keyboard_check(vk_up);
-var _key_down = keyboard_check(ord("S")) || keyboard_check(vk_down);
-var _key_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
+// --- 1. INPUTS ---
+var _key_up    = keyboard_check(ord("W")) || keyboard_check(vk_up);
+var _key_down  = keyboard_check(ord("S")) || keyboard_check(vk_down);
+var _key_left  = keyboard_check(ord("A")) || keyboard_check(vk_left);
 var _key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 
-// 2. Cálculo de Direção
-var _input_x = _key_right - _key_left;
-var _input_y = _key_down - _key_up;
+// --- 2. MOVIMENTAÇÃO E DIREÇÃO (FACE) ---
+h_spd = 0;
+v_spd = 0;
+var _moving = true; // Assumimos que está movendo, a menos que caia no 'else'
 
-// 3. Normalização (Pra não andar mais rápido na diagonal)
-if (_input_x != 0 || _input_y != 0) {
-    var _dir = point_direction(0, 0, _input_x, _input_y);
-    
-    // Se a máscara de Depressão estiver ativa, a gente reduz a velocidade aqui futuramente
-    var _current_speed = walk_speed; 
-    
-    h_spd = lengthdir_x(_current_speed, _dir);
-    v_spd = lengthdir_y(_current_speed, _dir);
+if (_key_right) {
+    h_spd = walk_speed;
+	image_xscale = 1
+
+    face = 0;
+} else if (_key_left) {
+    h_spd = -walk_speed;
+	image_xscale = -1
+
+    face = 2;
+} else if (_key_up) {
+    v_spd = -walk_speed;
+    face = 1;
+} else if (_key_down) {
+    v_spd = walk_speed;
+    face = 3;
 } else {
-    h_spd = 0;
-    v_spd = 0;
+    _moving = false; // Se não apertou nada, parado
 }
 
-// 4. Movimento com Colisão (A função mágica do GM2)
-// 'obj_wall' deve ser o objeto pai de todas as suas paredes
+// --- 3. ANIMAÇÃO (AQUI ESTÁ A CORREÇÃO) ---
+// O 'face' não muda se _moving for false, mantendo a última direção
+if (_moving) {
+    sprite_index = sprites_walk[face];
+} else {
+    sprite_index = sprites_idle[face];
+}
+
+// --- 4. COLISÃO ---
 move_and_collide(h_spd, v_spd, obj_wall);
 
-// area da máscara
-if keyboard_check_pressed(ord("K")) mask_active = !mask_active
-
-if (mask_active and !instance_exists(obj_enemy)) {
-    // 1. Escolhe um lado: 0=Esquerda, 1=Direita, 2=Cima, 3=Baixo
-    var side = irandom(3);
-    var spawn_x, spawn_y;
-    var margin = 20; // Distância fora da tela para ele não "dar pop"
-    
-    switch(side) {
-        case 0: // Esquerda
-            spawn_x = x - (160 + margin);
-            spawn_y = y + irandom_range(-90, 90);
-            break;
-        case 1: // Direita
-            spawn_x = x + (160 + margin);
-            spawn_y = y + irandom_range(-90, 90);
-            break;
-        case 2: // Cima
-            spawn_x = x + irandom_range(-160, 160);
-            spawn_y = y - (90 + margin);
-            break;
-        case 3: // Baixo
-            spawn_x = x + irandom_range(-160, 160);
-            spawn_y = y + (90 + margin);
-            break;
-    }
-    
-    instance_create_layer(spawn_x, spawn_y, "Instances", obj_enemy);
+// --- 5. SISTEMA DE MÁSCARA ---
+if (keyboard_check_pressed(ord("K"))) {
+    mask_active = !mask_active;
 }
 
-if !mask_active {
-    instance_destroy(obj_enemy);
+// --- 6. SPAWN DO INIMIGO ---
+if (mask_active) {
+    if (!instance_exists(obj_enemy)) {
+        var side = irandom(3);
+        var spawn_x, spawn_y;
+        var margin = 30; 
+        
+        switch(side) {
+            case 0: spawn_x = x - (160 + margin); spawn_y = y + irandom_range(-90, 90); break;
+            case 1: spawn_x = x + (160 + margin); spawn_y = y + irandom_range(-90, 90); break;
+            case 2: spawn_x = x + irandom_range(-160, 160); spawn_y = y - (90 + margin); break;
+            case 3: spawn_x = x + irandom_range(-160, 160); spawn_y = y + (90 + margin); break;
+        }
+        instance_create_layer(spawn_x, spawn_y, "Instances", obj_enemy);
+    }
+} else {
+    if (instance_exists(obj_enemy)) {
+        instance_destroy(obj_enemy);
+    }
 }
