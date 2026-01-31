@@ -60,8 +60,4 @@ if (mask_active) {
         }
         instance_create_layer(spawn_x, spawn_y, "Instances", obj_enemy);
     }
-} else {
-    if (instance_exists(obj_enemy)) {
-        instance_destroy(obj_enemy);
-    }
 }

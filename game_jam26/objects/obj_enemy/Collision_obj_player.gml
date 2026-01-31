@@ -3,7 +3,7 @@ tempo_perseguicao = 0;
 nivel_bloodlust = 0;
 vel_atual = vel_base;
 
-/// AQUI VOCÊ COLOCA:
+/// AQUI tem que COLOCA:
 /// dano
 /// game over
 /// respawn

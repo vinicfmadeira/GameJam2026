@@ -12,3 +12,6 @@ sprites_idle = [Mother_Idle, Mother_Idle_Up, Mother_Idle, Mother_Idle_Down];
 sprites_walk = [Mother_Walking, Mother_Walking_Up, Mother_Walking, Mother_Walking_Down];
 
 face = 3; // Começa olhando para baixo
+
+instance_create_layer(x,y,"Controladores",obj_camera)
+instance_create_layer(x,y, "Controladores",obj_light_control)

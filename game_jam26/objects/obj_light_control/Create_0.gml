@@ -1,0 +1,1 @@
+surf = -1; // Inicializa a surface como vazia

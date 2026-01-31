@@ -1,6 +1,9 @@
-target = obj_player; // Quem a câmera segue
-smoothing = 0.1;     // Quanto menor, mais suave (e mais lenta) ela é
+// Alvo que a câmera deve seguir
+target = obj_player;
 
-// Pega o tamanho da sua câmera (320x180)
+// Suavidade do movimento (0.1 é um valor padrão bom, 0.05 é mais lento/cinematográfico)
+smoothing = 0.1;
+
+// Dimensões da câmera (precisam ser as mesmas do Viewport nas configurações da Room)
 cam_width = 320;
 cam_height = 180;
