@@ -41,57 +41,33 @@ vel_atual = vel_base * (1 + 0.1 * nivel_bloodlust);
 
 
 /// ===============================
-/// MOVIMENTO 4 DIREÇÕES COM COLISÃO
+/// MOVIMENTO 4 DIREÇÕES (SEM COLISÃO)
 /// ===============================
 if (perseguindo) {
 
     var dx = obj_player.x - x;
     var dy = obj_player.y - y;
-    var moved = false;
 
     // PRIORIDADE: eixo com maior distância
     if (abs(dx) > abs(dy)) {
 
         // HORIZONTAL
-        if (dx > 0 && !place_meeting(x + vel_atual, y, obj_wall)) {
+        if (dx > 0) {
             x += vel_atual;
-            moved = true;
         }
-        else if (dx < 0 && !place_meeting(x - vel_atual, y, obj_wall)) {
+        else if (dx < 0) {
             x -= vel_atual;
-            moved = true;
         }
 
     } else {
 
         // VERTICAL
-        if (dy > 0 && !place_meeting(x, y + vel_atual, obj_wall)) {
+        if (dy > 0) {
             y += vel_atual;
-            moved = true;
         }
-        else if (dy < 0 && !place_meeting(x, y - vel_atual, obj_wall)) {
+        else if (dy < 0) {
             y -= vel_atual;
-            moved = true;
-        }
-    }
-
-    // SE BLOQUEADO, TENTA O OUTRO EIXO
-    if (!moved) {
-
-        if (abs(dx) <= abs(dy)) {
-            if (dx > 0 && !place_meeting(x + vel_atual, y, obj_wall)) {
-                x += vel_atual;
-            }
-            else if (dx < 0 && !place_meeting(x - vel_atual, y, obj_wall)) {
-                x -= vel_atual;
-            }
-        } else {
-            if (dy > 0 && !place_meeting(x, y + vel_atual, obj_wall)) {
-                y += vel_atual;
-            }
-            else if (dy < 0 && !place_meeting(x, y - vel_atual, obj_wall)) {
-                y -= vel_atual;
-            }
         }
     }
 }
+
