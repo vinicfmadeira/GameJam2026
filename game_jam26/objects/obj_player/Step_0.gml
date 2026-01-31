@@ -25,3 +25,6 @@ if (_input_x != 0 || _input_y != 0) {
 // 4. Movimento com Colisão (A função mágica do GM2)
 // 'obj_wall' deve ser o objeto pai de todas as suas paredes
 move_and_collide(h_spd, v_spd, obj_wall);
+
+// area da máscara
+if keyboard_check_pressed(ord("K")) mask_active = !mask_active

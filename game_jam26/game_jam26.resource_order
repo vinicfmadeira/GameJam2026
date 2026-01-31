@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings":[
-    {"name":"Scripts","order":7,"path":"folders/Scripts.yy",},
     {"name":"Objetos","order":4,"path":"folders/Objetos.yy",},
     {"name":"Salas","order":3,"path":"folders/Salas.yy",},
+    {"name":"Scripts","order":7,"path":"folders/Scripts.yy",},
     {"name":"Sons","order":6,"path":"folders/Sons.yy",},
     {"name":"OST","order":2,"path":"folders/Sons/OST.yy",},
     {"name":"SFX","order":1,"path":"folders/Sons/SFX.yy",},
@@ -10,6 +10,6 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
-    {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
+    {"name":"spr_wall_1","order":1,"path":"sprites/spr_wall_1/spr_wall_1.yy",},
   ],
 }
