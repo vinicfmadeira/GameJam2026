@@ -4,6 +4,7 @@ var _key_down  = keyboard_check(ord("S")) || keyboard_check(vk_down);
 var _key_left  = keyboard_check(ord("A")) || keyboard_check(vk_left);
 var _key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 
+var _layer_id = layer_get_id("Paredespw")
 // --- 2. MOVIMENTAÇÃO E DIREÇÃO (FACE) ---
 h_spd = 0;
 v_spd = 0;
@@ -43,9 +44,12 @@ move_and_collide(h_spd, v_spd, obj_wall);
 // --- 5. SISTEMA DE MÁSCARA ---
 if (keyboard_check_pressed(ord("K"))) {
     mask_active = !mask_active;
+	// avisa as paredes
+    
+
 }
 
-// --- 6. SPAWN DO INIMIGO ---
+// --- 6. SPAWN DO INIMIGO -- e voltando com as colisao da parede que some :)
 if (mask_active) {
     if (!instance_exists(obj_enemy)) {
         var side = irandom(3);
@@ -60,4 +64,9 @@ if (mask_active) {
         }
         instance_create_layer(spawn_x, spawn_y, "Instances", obj_enemy);
     }
+	instance_deactivate_layer(_layer_id)
+}
+
+else{
+	instance_activate_layer(_layer_id)
 }

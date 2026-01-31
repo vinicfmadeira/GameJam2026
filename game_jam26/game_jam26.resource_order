@@ -14,6 +14,7 @@
     {"name":"obj_camera","order":3,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"obj_enemy","order":2,"path":"objects/obj_enemy/obj_enemy.yy",},
     {"name":"obj_light_control","order":4,"path":"objects/obj_light_control/obj_light_control.yy",},
+    {"name":"obj_wall_alt","order":5,"path":"objects/obj_wall_alt/obj_wall_alt.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"Mother_Idle_Up","order":1,"path":"sprites/Mother_Idle_Up/Mother_Idle_Up.yy",},
     {"name":"Mother_Idle","order":9,"path":"sprites/Mother_Idle/Mother_Idle.yy",},
@@ -28,5 +29,6 @@
     {"name":"spr_player2","order":2,"path":"sprites/spr_player2/spr_player2.yy",},
     {"name":"spr_vision_mask","order":10,"path":"sprites/spr_vision_mask/spr_vision_mask.yy",},
     {"name":"spr_wall_1","order":1,"path":"sprites/spr_wall_1/spr_wall_1.yy",},
+    {"name":"spr_wall_2","order":11,"path":"sprites/spr_wall_2/spr_wall_2.yy",},
   ],
 }
