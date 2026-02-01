@@ -45,7 +45,6 @@
     {"id":{"name":"obj_wall_alt","path":"objects/obj_wall_alt/obj_wall_alt.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"Floor_do_Luc_o","path":"sprites/Floor_do_Luc_o/Floor_do_Luc_o.yy",},},
     {"id":{"name":"scr_screen_shake","path":"scripts/scr_screen_shake/scr_screen_shake.yy",},},
     {"id":{"name":"snd_fase1","path":"sounds/snd_fase1/snd_fase1.yy",},},
     {"id":{"name":"snd_rage","path":"sounds/snd_rage/snd_rage.yy",},},
