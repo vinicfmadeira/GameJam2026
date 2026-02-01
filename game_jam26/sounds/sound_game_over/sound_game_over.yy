@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"game_over_terminal",
+  "%Name":"sound_game_over",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":2.032381,
   "exportDir":"",
-  "name":"game_over_terminal",
+  "name":"sound_game_over",
   "parent":{
     "name":"SFX",
     "path":"folders/Sons/SFX.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"game_over_terminal.mp3",
+  "soundFile":"sound_game_over.mp3",
   "volume":1.0,
 }

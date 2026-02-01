@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"theme",
+  "%Name":"snd_theme",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":114.4947,
   "exportDir":"",
-  "name":"theme",
+  "name":"snd_theme",
   "parent":{
     "name":"OST",
     "path":"folders/Sons/OST.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"theme.mp3",
+  "soundFile":"snd_theme.mp3",
   "volume":1.0,
 }
