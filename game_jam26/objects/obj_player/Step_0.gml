@@ -76,3 +76,4 @@ if (mask_active) {
 else{
 	instance_activate_layer(_layer_id)
 }
+
