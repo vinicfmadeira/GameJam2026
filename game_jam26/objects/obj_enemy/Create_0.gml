@@ -1,7 +1,7 @@
 /// ===============================
 /// MOVIMENTO
 /// ===============================
-vel_base = 2;
+vel_base = 1;
 vel_atual = vel_base;
 
 /// ===============================
@@ -13,11 +13,11 @@ nivel_bloodlust = 0;
 /// ===============================
 /// CONFIGURAÇÕES
 /// ===============================
-tempo_bl1 = 10;
-tempo_bl2 = 20;
-tempo_bl3 = 30;
+tempo_bl1 = 3;
+tempo_bl2 = 5;
+tempo_bl3 = 8;
 
-raio_perseguicao = 200;
+raio_perseguicao = 700;
 
 /// ===============================
 /// ESTADO

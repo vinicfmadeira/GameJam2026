@@ -1,8 +1,9 @@
 /// ===============================
-/// DETECTAR PERSEGUIÇÃO
+/// CONTROLE DE MÁSCARA E ATIVAÇÃO
 /// ===============================
 if (obj_player.mask_active) {
 
+    // 1. Detectar Perseguição
     if (distance_to_object(obj_player) < raio_perseguicao) {
         perseguindo = true;
     } else {
@@ -14,60 +15,79 @@ if (obj_player.mask_active) {
     /// ===============================
     if (perseguindo) {
         tempo_perseguicao += delta_time / 1000000;
+        
+        // Definir Nível do Bloodlust
+        if (tempo_perseguicao >= tempo_bl3) nivel_bloodlust = 3;
+        else if (tempo_perseguicao >= tempo_bl2) nivel_bloodlust = 2;
+        else if (tempo_perseguicao >= tempo_bl1) nivel_bloodlust = 1;
+        else nivel_bloodlust = 0;
+        
     } else {
-        sprite_index = spr_monster_stop; // Sprite quando não está perseguindo
+        // Se parou de perseguir, reseta tudo e fica em IDLE
+        sprite_index = spr_monster_stop;
         tempo_perseguicao = 0;
         nivel_bloodlust = 0;
         vel_atual = vel_base;
     }
 
-    /// ===============================
-    /// DEFINIR NÍVEL DO BLOODLUST
-    /// ===============================
-    if (tempo_perseguicao >= tempo_bl3) nivel_bloodlust = 3;
-    else if (tempo_perseguicao >= tempo_bl2) nivel_bloodlust = 2;
-    else if (tempo_perseguicao >= tempo_bl1) nivel_bloodlust = 1;
-    else nivel_bloodlust = 0;
-
+    // Calcula velocidade atual baseada no nível de sangue nos olhos
     vel_atual = vel_base * (1 + 0.1 * nivel_bloodlust);
 
     /// ===============================
-    /// MOVIMENTO E ANIMAÇÃO
+    /// MOVIMENTO E ANIMAÇÃO (SEM BUG)
     /// ===============================
     if (perseguindo) {
+		screen_shake(0.5, 5); //chama o tremor
+		
+		
         var dx = obj_player.x - x;
         var dy = obj_player.y - y;
+        
+        // Margem para evitar que o sprite fique "vibrando" em diagonais
+        var margin = 4; 
 
-        // PRIORIDADE: eixo com maior distância
-        if (abs(dx) > abs(dy)) {
-            // MOVIMENTO HORIZONTAL
+        // Caso 1: Movimento claramente Horizontal
+        if (abs(dx) > abs(dy) + margin) {
             sprite_index = spr_monster_side;
             if (dx > 0) {
                 x += vel_atual;
-                image_xscale = -1; // Olhando para a direita
+                image_xscale = -1; // Direita
             } else {
                 x -= vel_atual;
-                image_xscale = 1; // Olhando para a esquerda (Inverte o sprite side)
+                image_xscale = 1;  // Esquerda
             }
-        } else {
-            // MOVIMENTO VERTICAL
+        } 
+        // Caso 2: Movimento claramente Vertical
+        else if (abs(dy) > abs(dx) + margin) {
+            image_xscale = 1; 
             if (dy > 0) {
-                x += 0; // Trava o X para não deslizar
                 y += vel_atual;
                 sprite_index = spr_monster_down;
             } else {
-                x += 0;
                 y -= vel_atual;
                 sprite_index = spr_monster_up;
             }
-            image_xscale = 1; // Reseta o flip para não ficar invertido em cima/baixo
+        }
+        // Caso 3: Diagonal ou muito perto (Mantém o sprite anterior mas continua andando)
+        else {
+            if (abs(dx) > abs(dy)) {
+                x += (dx > 0) ? vel_atual : -vel_atual;
+                // Só atualiza sprite se necessário
+                if (sprite_index == spr_monster_stop) sprite_index = spr_monster_side;
+            } else {
+                y += (dy > 0) ? vel_atual : -vel_atual;
+            }
         }
     }
 } else {
-    // MÁSCARA DESATIVADA: O bicho "para de funfar"
+    /// ===============================
+    /// MÁSCARA DESATIVADA (O BICHO PARA)
+    /// ===============================
     sprite_index = spr_monster_stop;
     tempo_perseguicao = 0;
     nivel_bloodlust = 0;
     vel_atual = vel_base;
-    // Opcional: x = -9999; se quiser que ele suma mecanicamente como falamos
+    
+    // Se quiser que ele suma quando a máscara tá off, descomente a linha abaixo:
+    // visible = false; 
 }

@@ -25,7 +25,9 @@
     {"$GMFolder":"","%Name":"Texto","folderPath":"folders/Texto.yy","name":"Texto","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"musicarage.mpeg","CopyToMask":-1,"filePath":"datafiles","name":"musicarage.mpeg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -36,12 +38,20 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_light_control","path":"objects/obj_light_control/obj_light_control.yy",},},
+    {"id":{"name":"obj_mask","path":"objects/obj_mask/obj_mask.yy",},},
+    {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},},
     {"id":{"name":"obj_wall_alt","path":"objects/obj_wall_alt/obj_wall_alt.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"Floor_do_Luc_o","path":"sprites/Floor_do_Luc_o/Floor_do_Luc_o.yy",},},
+=======
+    {"id":{"name":"scr_screen_shake","path":"scripts/scr_screen_shake/scr_screen_shake.yy",},},
+    {"id":{"name":"snd_fase1","path":"sounds/snd_fase1/snd_fase1.yy",},},
+    {"id":{"name":"snd_rage","path":"sounds/snd_rage/snd_rage.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"Mother_Idle_Down","path":"sprites/Mother_Idle_Down/Mother_Idle_Down.yy",},},
     {"id":{"name":"Mother_Idle_Up","path":"sprites/Mother_Idle_Up/Mother_Idle_Up.yy",},},
     {"id":{"name":"Mother_Idle","path":"sprites/Mother_Idle/Mother_Idle.yy",},},
@@ -54,6 +64,7 @@
     {"id":{"name":"Mother_Walking_Down","path":"sprites/Mother_Walking_Down/Mother_Walking_Down.yy",},},
     {"id":{"name":"Mother_Walking_Up","path":"sprites/Mother_Walking_Up/Mother_Walking_Up.yy",},},
     {"id":{"name":"Mother_Walking","path":"sprites/Mother_Walking/Mother_Walking.yy",},},
+    {"id":{"name":"spr_gui_mask","path":"sprites/spr_gui_mask/spr_gui_mask.yy",},},
     {"id":{"name":"spr_monster_down","path":"sprites/spr_monster_down/spr_monster_down.yy",},},
     {"id":{"name":"spr_monster_eyes","path":"sprites/spr_monster_eyes/spr_monster_eyes.yy",},},
     {"id":{"name":"spr_monster_side","path":"sprites/spr_monster_side/spr_monster_side.yy",},},
@@ -63,6 +74,7 @@
     {"id":{"name":"spr_player2","path":"sprites/spr_player2/spr_player2.yy",},},
     {"id":{"name":"spr_portal_active","path":"sprites/spr_portal_active/spr_portal_active.yy",},},
     {"id":{"name":"spr_vision_mask","path":"sprites/spr_vision_mask/spr_vision_mask.yy",},},
+    {"id":{"name":"spr_vision_mask2","path":"sprites/spr_vision_mask2/spr_vision_mask2.yy",},},
     {"id":{"name":"spr_wall_1","path":"sprites/spr_wall_1/spr_wall_1.yy",},},
     {"id":{"name":"spr_wall_2","path":"sprites/spr_wall_2/spr_wall_2.yy",},},
     {"id":{"name":"spr_wall_mask","path":"sprites/spr_wall_mask/spr_wall_mask.yy",},},

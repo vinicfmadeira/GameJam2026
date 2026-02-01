@@ -20,3 +20,5 @@ face = 3; // Começa olhando para baixo
 
 instance_create_layer(x,y,"Controladores",obj_camera)
 instance_create_layer(x,y, "Controladores",obj_light_control)
+instance_create_layer(x,y,"Controladores", obj_mask)
+instance_create_layer(x,y,"Controladores",obj_music)

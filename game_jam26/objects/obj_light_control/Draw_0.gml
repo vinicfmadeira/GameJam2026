@@ -16,7 +16,7 @@ gpu_set_blendmode(bm_subtract);
 if (instance_exists(obj_player)) {
     // O tamanho do furo pode mudar se a máscara estiver ativa
     var _scale = (obj_player.mask_active) ? 1.5 : 1.0;
-    draw_sprite_ext(spr_vision_mask, 0, obj_player.x, obj_player.y, _scale, _scale, 0, c_white, 1);
+    draw_sprite_ext(spr_vision_mask2, 0, obj_player.x, obj_player.y, _scale, _scale, 0, c_white, 1);
 }
 
 // --- FURO DAS TOCHAS/LUZES ---
