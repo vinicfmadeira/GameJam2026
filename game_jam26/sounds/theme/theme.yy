@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"theme",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":114.4947,
+  "exportDir":"",
+  "name":"theme",
+  "parent":{
+    "name":"OST",
+    "path":"folders/Sons/OST.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"theme.mp3",
+  "volume":1.0,
+}

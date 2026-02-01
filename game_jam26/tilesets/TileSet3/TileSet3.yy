@@ -12,14 +12,14 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"group1",
-    "path":"folders/Sprite/group1.yy",
+    "name":"Tiles",
+    "path":"folders/Sprite/Tiles.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Floor_do_Luc_o",
-    "path":"sprites/Floor_do_Luc_o/Floor_do_Luc_o.yy",
+    "name":"Floor_do_Lucao",
+    "path":"sprites/Floor_do_Lucao/Floor_do_Lucao.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

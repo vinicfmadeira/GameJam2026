@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_rage",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sons/SFX.yy",
+    "name":"OST",
+    "path":"folders/Sons/OST.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -3,6 +3,8 @@ var _key_up    = keyboard_check(ord("W")) || keyboard_check(vk_up);
 var _key_down  = keyboard_check(ord("S")) || keyboard_check(vk_down);
 var _key_left  = keyboard_check(ord("A")) || keyboard_check(vk_left);
 var _key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
+key_interact = keyboard_check(ord("J")) //adicionar alguma tecla do numpad pra isso tbm
+
 
 var _layer_id = layer_get_id("Paredespw")
 // --- 2. MOVIMENTAÇÃO E DIREÇÃO (FACE) ---
@@ -68,6 +70,7 @@ if (mask_active) {
         instance_create_layer(spawn_x, spawn_y, "Instances", obj_enemy);
     }
 	instance_deactivate_layer(_layer_id)
+
 }
 
 else{
