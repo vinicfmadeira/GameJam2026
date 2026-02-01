@@ -1,8 +1,8 @@
 // Chance de 10% de tocar um som (0.1)
-/*
+
 if (random(1) < 0.1) {
     // Escolhe um som aleatório entre as suas opções
-    var _som = choose(snd_amb_1, snd_amb_2, snd_amb_3);
+    var _som = choose(snd_voices, snd_grassteps);
     
     // Toca o som com pitch (velocidade) variada para não cansar o ouvido
     var _inst = audio_play_sound(_som, 5, false);
@@ -11,5 +11,4 @@ if (random(1) < 0.1) {
 }
 
 // Reseta o alarme para daqui a 1 segundo
-alarm[0] = 60;
-*/
+alarm[0] = 20;

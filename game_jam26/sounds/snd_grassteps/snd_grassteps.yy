@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"GrassSteps",
+  "%Name":"snd_grassteps",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":184.80351,
   "exportDir":"",
-  "name":"GrassSteps",
+  "name":"snd_grassteps",
   "parent":{
     "name":"SFX",
     "path":"folders/Sons/SFX.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"GrassSteps.mp3",
+  "soundFile":"snd_grassteps.mp3",
   "volume":1.0,
 }

@@ -18,7 +18,7 @@ sprites_walk_mask = [Mother_Mask_Walking, Mother_Mask_Walking_Up, Mother_Mask_Wa
 
 face = 3; // Começa olhando para baixo
 
-instance_create_layer(x,y,"Controladores",obj_camera)
-instance_create_layer(x,y, "Controladores",obj_light_control)
-instance_create_layer(x,y,"Controladores", obj_mask)
-instance_create_layer(x,y,"Controladores",obj_music)
+if !instance_exists(obj_camera) instance_create_layer(x,y,"Controladores",obj_camera)
+if !instance_exists(obj_light_control) instance_create_layer(x,y,"Controladores",obj_light_control)
+if !instance_exists(obj_mask) instance_create_layer(x,y,"Controladores",obj_mask)
+if !instance_exists(obj_music) instance_create_layer(x,y,"Controladores",obj_music)

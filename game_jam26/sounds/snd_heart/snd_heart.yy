@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"HeartBeat",
+  "%Name":"snd_heart",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":56.156418,
   "exportDir":"",
-  "name":"HeartBeat",
+  "name":"snd_heart",
   "parent":{
     "name":"SFX",
     "path":"folders/Sons/SFX.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"HeartBeat.mp3",
+  "soundFile":"snd_heart.mp3",
   "volume":1.0,
 }
