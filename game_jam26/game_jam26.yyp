@@ -76,6 +76,7 @@
     {"id":{"name":"room_inst","path":"rooms/room_inst/room_inst.yy",},},
     {"id":{"name":"scr_screen_shake","path":"scripts/scr_screen_shake/scr_screen_shake.yy",},},
     {"id":{"name":"chase","path":"sounds/chase/chase.yy",},},
+    {"id":{"name":"snd_click","path":"sounds/snd_click/snd_click.yy",},},
     {"id":{"name":"snd_fase1","path":"sounds/snd_fase1/snd_fase1.yy",},},
     {"id":{"name":"snd_grassteps","path":"sounds/snd_grassteps/snd_grassteps.yy",},},
     {"id":{"name":"snd_heart","path":"sounds/snd_heart/snd_heart.yy",},},
