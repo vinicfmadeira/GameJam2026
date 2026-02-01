@@ -9,8 +9,8 @@
   },
   "name":"TileSet1",
   "out_columns":3,
-  "out_tilehborder":2,
-  "out_tilevborder":2,
+  "out_tilehborder":1,
+  "out_tilevborder":1,
   "parent":{
     "name":"Sprite",
     "path":"folders/Sprite.yy",
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":9,
+  "tile_count":12,
 }

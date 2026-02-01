@@ -3,8 +3,8 @@
   "%Name":"tile_set_1_green_V3",
   "bboxMode":0,
   "bbox_bottom":45,
-  "bbox_left":2,
-  "bbox_right":45,
+  "bbox_left":18,
+  "bbox_right":61,
   "bbox_top":2,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":48,
+  "width":64,
 }
