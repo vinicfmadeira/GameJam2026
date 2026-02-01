@@ -33,9 +33,12 @@ if (_key_right) {
 // --- 3. ANIMAÇÃO (AQUI ESTÁ A CORREÇÃO) ---
 // O 'face' não muda se _moving for false, mantendo a última direção
 if (_moving) {
-    sprite_index = sprites_walk[face];
+	if !mask_active sprite_index = sprites_walk[face];
+	else sprite_index = sprites_walk_mask[face]
 } else {
-    sprite_index = sprites_idle[face];
+	if !mask_active sprite_index = sprites_idle[face]
+    else sprite_index = sprites_idle_mask[face]
+	
 }
 
 // --- 4. COLISÃO ---

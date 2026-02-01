@@ -5,5 +5,7 @@ target = obj_player;
 smoothing = 0.1;
 
 // Dimensões da câmera (precisam ser as mesmas do Viewport nas configurações da Room)
-cam_width = 320;
-cam_height = 180;
+//cam_width = 320;
+//cam_height = 180;
+cam_width = 240;
+cam_height = 135;

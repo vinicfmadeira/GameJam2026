@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Mother",
-    "path":"folders/Sprite/Mother.yy",
+    "name":"NOMASK",
+    "path":"folders/Sprite/Mother/NOMASK.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

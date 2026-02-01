@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Mother",
-    "path":"folders/Sprite/Mother.yy",
+    "name":"MASK",
+    "path":"folders/Sprite/Mother/MASK.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -7,7 +7,7 @@ if (!surface_exists(surf)) {
 surface_set_target(surf);
 
 // 3. Pinta tudo de preto (0.9 de alpha para não ser um breu 100% total)
-draw_clear_alpha(c_black, 0.9);
+draw_clear_alpha(c_black, 1);
 
 // 4. Configura o modo de "SUBTRAÇÃO" (Furar o preto)
 gpu_set_blendmode(bm_subtract);
