@@ -13,7 +13,7 @@ var _interativo = (_dist_parede < _dist_botao) ? _inst_parede : _inst_botao;
 var _menor_distancia = min(_dist_parede, _dist_botao);
 
 // 2. Se estiver perto, sem máscara e alvo não ativo
-if (_interativo != noone && _menor_distancia < 30 && !mask_active) {
+if (_interativo != noone && _menor_distancia < 10 && !mask_active) {
     
     // --- O PULO DO GATO: Converter posição do mundo para a tela ---
     // Isso faz o ícone seguir o player mesmo na camada GUI

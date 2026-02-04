@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Floor_do_Lucao",
-    "path":"sprites/Floor_do_Lucao/Floor_do_Lucao.yy",
+    "name":"spr_floor",
+    "path":"sprites/spr_floor/spr_floor.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

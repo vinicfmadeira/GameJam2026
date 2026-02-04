@@ -21,8 +21,8 @@
   ],
   "name":"Menu",
   "parent":{
-    "name":"Salas",
-    "path":"folders/Salas.yy",
+    "name":"Menu's",
+    "path":"folders/Salas/Menu's.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
