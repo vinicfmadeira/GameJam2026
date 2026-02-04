@@ -35,7 +35,6 @@
     {"name":"obj_jumpscare","order":15,"path":"objects/obj_jumpscare/obj_jumpscare.yy",},
     {"name":"obj_light_control","order":4,"path":"objects/obj_light_control/obj_light_control.yy",},
     {"name":"obj_mask","order":7,"path":"objects/obj_mask/obj_mask.yy",},
-    {"name":"obj_menu_back","order":4,"path":"objects/obj_menu_back/obj_menu_back.yy",},
     {"name":"obj_menu_credits","order":1,"path":"objects/obj_menu_credits/obj_menu_credits.yy",},
     {"name":"obj_menu_exit","order":2,"path":"objects/obj_menu_exit/obj_menu_exit.yy",},
     {"name":"obj_menu","order":3,"path":"objects/obj_menu/obj_menu.yy",},
